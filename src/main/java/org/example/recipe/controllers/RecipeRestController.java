@@ -12,11 +12,11 @@ public class RecipeRestController {
     @GetMapping("")
     public List<Recipe> listRecipes() {}
     @GetMapping("/{id}")
-    public Recipe gerRecipe() {}
+    public Recipe getRecipe(@PathVariable Long id) {}
     @PostMapping("")
-    public Recipe createRecipe(Recipe recipe) {}
+    public Recipe createRecipe(@RequestBody Recipe recipe) {}
     @PutMapping("/{id}")
-    public Recipe updateRecipe(Recipe recipe, Long id) {}
+    public Recipe updateRecipe(@RequestBody Recipe recipe, @PathVariable Long id) {}
     @DeleteMapping("/{id}")
-    public Recipe deleteRecipe(Long id) {}
+    public Recipe deleteRecipe(@PathVariable Long id) {}
 }
