@@ -1,22 +1,22 @@
 package org.example.recipe.controllers;
 
 import org.example.recipe.models.Recipe;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/recipes")
+
 public class RecipeRestController {
 
+    @GetMapping("")
     public List<Recipe> listRecipes() {}
-
+    @GetMapping("/{id}")
     public Recipe gerRecipe() {}
-
+    @PostMapping("")
     public Recipe createRecipe(Recipe recipe) {}
-
+    @PutMapping("/{id}")
     public Recipe updateRecipe(Recipe recipe, Long id) {}
-
+    @DeleteMapping("/{id}")
     public Recipe deleteRecipe(Long id) {}
 }
